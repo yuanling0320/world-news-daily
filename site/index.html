@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1221">
+  <meta name="description" content="世界重點：每天更新的國際重大新聞與繁體中文摘要，附原文報導連結。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>世界重點 — 每日國際新聞</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark">W.</span><span>世界重點<small>WORLD BRIEFING</small></span></div>
+    <span class="edition">繁體中文・台灣時間</span>
+  </header>
+  <main class="container">
+    <section class="hero" aria-labelledby="title">
+      <span class="eyebrow"><span class="live-dot"></span> DAILY GLOBAL BRIEFING</span>
+      <h1 id="title">世界正在發生<br><em>什麼大事？</em></h1>
+      <p class="deck">把值得關心的重大國際事件，整理成有原始來源、讀得懂的每日摘要。</p>
+      <div class="hero-footer"><span id="today">—</span><button id="refresh" type="button">↻ 重新整理</button></div>
+    </section>
+    <section class="summary" aria-labelledby="summary-title">
+      <div class="section-heading"><span>01 / 核心快報</span><span id="updated" class="muted">讀取中⋯</span></div>
+      <h2 id="summary-title">今天的國際焦點</h2>
+      <p id="brief" class="brief">正在讀取最新新聞⋯</p>
+      <p id="status" role="status" class="status"></p>
+    </section>
+    <section class="news" aria-labelledby="news-title">
+      <div class="section-heading"><span>02 / 重點事件</span><span id="counter" class="muted"></span></div>
+      <div class="news-head"><h2 id="news-title">國際重大新聞</h2><div id="filters" class="filters" aria-label="新聞分類"></div></div>
+      <div id="list" class="grid" aria-live="polite"></div>
+    </section>
+    <footer><p>獨立個人專案，與各新聞媒體沒有合作或隸屬關係。資料來源：公開新聞 RSS；僅整理標題與摘要片段。請點選「原文報導」核對完整背景與後續更新。</p><p>刊登時間 ≠ 事件發生時間。此服務非即時快訊，預計每日台灣時間 08:07、13:07、20:07 更新，執行可能延遲。</p></footer>
+  </main>
+</body>
+</html>
